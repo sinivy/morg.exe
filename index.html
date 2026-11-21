@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORG.EXE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+
+    <header>
+        <h1>MORG.EXE</h1>
+        <p>Uma entidade cósmica com acesso à internet.</p>
+    </header>
+
+    <main>
+
+        <aside>
+
+         <h2>Configurações</h2>
+         <div>
+         <h3>Seu signo</h3>
+
+         <select id="signo">
+            <option value="">Selecione seu signo</option>
+            <option value="aries">Áries</option>
+            <option value="touro">Touro</option>
+            <option value="gemeos">Gêmeos</option>
+            <option value="cancer">Câncer</option>
+            <option value="leao">Leão</option>
+            <option value="virgem">Virgem</option>
+            <option value="libra">Libra</option>
+            <option value="escorpiao">Escorpião</option>
+            <option value="sagitario">Sagitário</option>
+            <option value="capricornio">Capricórnio</option>
+            <option value="aquario">Aquário</option>
+            <option value="peixes">Peixes</option>
+         </select>
+         </div>
+
+         <div>
+         <h3>O que deseja saber?</h3>
+
+          <button type="button" data-category="amor">Amor</button>
+          <button type="button" data-category="dinheiro">Dinheiro</button>
+          <button type="button" data-category="trabalho">Trabalho</button>
+          <button type="button" data-category="estudos">Estudos</button>
+          <button type="button" data-category="eu">Eu</button>
+          <button type="button" data-category="caos">Caos</button>
+         </div>
+
+         <button type="button" id="consultar-morg">Consultar Morg</button>
+        </aside>
+
+     <section id="area-morg">
+            
+     <div id="janela-morg">
+
+        <div id="imagem-morg">
+            <img src="morg.png">
+        </div>
+
+     </div>
+
+     <div id="terminal">
+
+        <h3>Terminal da Morg</h3>
+
+        <div id="mensagens">
+            <p>> Aguardando invocação...</p>
+            <p>> Sistema astral em modo standby.</p>
+            <p>> Morg está dormindo. Boa sorte.</p>
+     </div>
+
+     </div>
+
+     <div id="resultado">
+
+        <h2>Seu conselho</h2>
+
+        <p id="frase">
+            A entidade ainda não se pronunciou.
+        </p>
+
+        <button type="button" id="outra-mensagem">Outra mensagem</button>
+        <button type="button">Copiar</button>
+        <button type="button">Compartilhar</button>
+
+     </div>
+
+        </section>
+
+     
+ <aside id="ficha-morg">
+
+    <h2>Perfil da Entidade</h2>
+
+    <div id="perfil-morg">
+        <h3>MORG.EXE</h3>
+        <p class="status">● ONLINE</p>
+    </div>
+
+    <div id="sobre-morg">
+        <h3>QUEM É MORG?</h3>
+
+        <p>
+            Morg é uma entidade que habita os cantos esquecidos
+            da internet. Ninguém sabe exatamente de onde veio,
+            mas aparentemente ela encontrou moradia entre arquivos
+            corrompidos, páginas abandonadas e coisas que você
+            deveria ter superado.
+        </p>
+
+        <p>
+            Ela lê os astros, coleciona segredos, distribui
+            conselhos duvidosos e se diverte observando humanos
+            complicarem situações perfeitamente evitáveis.
+        </p>
+
+        <p>
+            Não é exatamente uma fada. Não é exatamente um vírus.
+            E definitivamente não é sua terapeuta.
+        </p>
+    </div>
+
+    <div class="dados-morg">
+        <p><strong>Origem:</strong> desconhecida</p>
+        <p><strong>Habitat:</strong> internet / plano astral</p>
+        <p><strong>Personalidade:</strong> caótica</p>
+        <p><strong>Especialidade:</strong> conselhos e deboches</p>
+        <p><strong>Alinhamento:</strong> questionável</p>
+    </div>
+
+     <div id="curiosidades-morg">
+
+        <h3>✦ Curiosidade aleatória ✦</h3>
+
+        <p id="curiosidade">
+            Carregando informações confidenciais...
+        </p>
+
+    </div>
+
+    <div>
+     <p>MORG.EXE © 2026 — não responsabilizamos os astros.</p>
+     <p>Feito com magia, pixels e decisões duvidosas por SINIVY. </p>
+    </div>
+ </aside>
+
+    </main>
+
+
+<script>
+
+    const curiosidadesMorg = [
+        "Última atividade: espionando Saturno.",
+        "Integridade emocional: 3%. Integridade do sistema: desconhecida.",
+        "Morg já foi expulsa de 7 planos astrais. O motivo é confidencial.",
+        "Possui 482 abas abertas e se recusa a fechar qualquer uma.",
+        "Já amaldiçoou uma impressora. A impressora mereceu.",
+        "Seu passatempo favorito é observar humanos ignorarem sinais óbvios.",
+        "Está proibida de acessar o departamento de profecias.",
+        "Não possui CPF, mas possui pendências cósmicas.",
+        "Já tentou ler o próprio mapa astral e se arrependeu.",
+        "Consome aproximadamente 98% de sarcasmo por dia.",
+        "Seu último relacionamento foi com uma conexão discada. Durou pouco.",
+        "Tem acesso aos arquivos akáshicos, mas esqueceu a senha.",
+        "Atualmente está fingindo que trabalha.",
+        "Seu signo é um problema administrativo.",
+        "Já hackeou o destino. O destino abriu um chamado.",
+        "Não sabe cozinhar, mas sabe invocar coisas que sabem.",
+        "Possui uma coleção de presságios que nunca solicitou.",
+        "Foi vista discutindo com Mercúrio retrógrado. Novamente.",
+        "Favor não alimentar a entidade depois da meia-noite.",
+        "Morg afirma estar ótima. Os logs dizem o contrário.",
+        "Está analisando sua vida amorosa. Pediu demissão da análise.",
+        "Tem 3 inimigos, 12 admiradores e nenhum arquivo organizado.",
+        "Seu hobby é abrir portais e esquecer onde levam.",
+        "A entidade está ocupada. Mentira, está ouvindo música.",
+        "Já tentou desaparecer da internet, mas voltou para fofocar."
+    ];
+
+    const curiosidade = document.getElementById("curiosidade");
+
+    const sorteio = Math.floor(Math.random() * curiosidadesMorg.length);
+
+    curiosidade.textContent = curiosidadesMorg[sorteio];
+
+</script>
+
+<script>
+// ========================================
+// MORG.EXE - SISTEMA DE CONSULTA
+// ========================================
+
+// ELEMENTOS DO HTML
+
+const signo = document.getElementById("signo");
+const frase = document.getElementById("frase");
+
+const categorias = document.querySelectorAll("[data-category]");
+const consultar = document.getElementById("consultar-morg");
+const outraMensagem = document.getElementById("outra-mensagem");
+
+const terminal = document.getElementById("mensagens");
+
+
+// ESTADO DA MORG
+
+let signoAtual = "";
+let categoriaAtual = "";
+let ultimaFrase = "";
+
+
+// BANCO TEMPORÁRIO DE CONSELHOS
+
+const conselhos = {
+
+    amor: [
+        "Amada, isso não é intuição. Você está criando uma fanfic com orçamento emocional ilimitado.",
+        "Reciprocidade não deveria exigir investigação criminal.",
+        "Você pode gostar de alguém sem transformar essa pessoa no centro da sua existência.",
+        "Se a pessoa oferece confusão, não significa que ela seja misteriosa. Às vezes só é confusa mesmo.",
+        "Pare de romantizar o mínimo. Até um pombo sabe voltar para casa.",
+        "Não confunda saudade com autorização para aceitar qualquer coisa.",
+        "O universo não está pedindo que você mande outra mensagem. Vá beber água.",
+        "Se precisa interpretar cada migalha, talvez o banquete não exista."
+    ],
+
+    dinheiro: [
+        "Manifestar abundância é lindo. Saber quanto existe na conta também é uma prática espiritual.",
+        "Sua carteira está pedindo proteção energética. E um emprego melhor.",
+        "Antes de comprar, pergunte se você quer o produto ou apenas está tentando sentir alguma coisa.",
+        "O cartão de crédito não é uma extensão astral do seu salário.",
+        "Prosperidade também significa não parcelar uma crise existencial em doze vezes.",
+        "Saturno está analisando seus gastos. Ele não está impressionado."
+    ],
+
+    trabalho: [
+        "Pare de pedir autorização mentalmente para fazer o que você já decidiu. Só confira se não está incendiando a ponte que ainda precisa atravessar.",
+        "Nem todo colega é amigo. Alguns são apenas NPCs com acesso ao RH.",
+        "Você não precisa provar seu valor sofrendo mais que todo mundo.",
+        "Faça seu trabalho, preserve sua paz e não adote problemas que não possuem seu nome.",
+        "Seu potencial não precisa de plateia o tempo inteiro. Construa e deixe o resultado falar.",
+        "O ambiente está estranho? Observe antes de abrir sua boca e invocar consequências."
+    ],
+
+    estudos: [
+        "Você não precisa pesquisar outras 14 maneiras de estudar. Escolha uma, abra o material e permita que a inteligência trabalhe em horário comercial.",
+        "O conhecimento não vai entrar na sua cabeça por osmose enquanto você reorganiza a playlist.",
+        "Estudar 20 minutos ainda é estudar. Pare de esperar uma epifania de 6 horas.",
+        "Você pode revolucionar o método de aprendizagem depois de estudar o conteúdo.",
+        "Seu cérebro não precisa de humilhação. Precisa de repetição, descanso e alguma paciência.",
+        "Abra o material. O drama pode continuar depois."
+    ],
+
+    eu: [
+        "Você não precisa resolver sua vida inteira hoje. Nem mesmo as próximas três horas.",
+        "Descansar não é um crime contra sua produtividade, criatura.",
+        "Talvez você não esteja atrasada. Talvez esteja tentando seguir um cronograma que nem foi feito para você.",
+        "Você pode recomeçar sem fazer um discurso de despedida para sua versão anterior.",
+        "Não transforme um dia ruim em uma profecia sobre o resto da sua vida.",
+        "Sua existência não precisa ser justificada por resultados.",
+        "Faça o que puder com a energia que realmente tem, não com aquela imaginária."
+    ],
+
+    caos: [
+        "Morg abriu um portal. Era só uma dívida emocional. Feche o portal.",
+        "Mercúrio solicitou que você pare de enviar mensagens. O departamento está cansado.",
+        "Uma energia estranha está rondando. Provavelmente é você sem dormir.",
+        "Os astros estão alinhados. Você, aparentemente, não.",
+        "O universo tem um plano. Ele não quis compartilhar o documento.",
+        "Você está recebendo um sinal. Não sabemos de quem. Não temos setor responsável.",
+        "Sua aura está carregando. Evite desligar o aparelho.",
+        "Hoje é um excelente dia para não piorar uma situação perfeitamente evitável."
+    ]
+
+};
+
+
+// SELEÇÃO DO SIGNO
+
+signo.addEventListener("change", function () {
+
+    signoAtual = signo.value;
+
+});
+
+
+// SELEÇÃO DA CATEGORIA
+
+categorias.forEach(function (botao) {
+
+    botao.addEventListener("click", function () {
+
+        categoriaAtual = botao.dataset.category;
+
+        categorias.forEach(function (item) {
+            item.classList.remove("selecionado");
+        });
+
+        botao.classList.add("selecionado");
+
+    });
+
+});
+
+
+// SORTEIO DA FRASE
+
+function sortearFrase() {
+
+    const lista = conselhos[categoriaAtual];
+
+    let novaFrase;
+
+    do {
+
+        const indice = Math.floor(Math.random() * lista.length);
+        novaFrase = lista[indice];
+
+    } while (novaFrase === ultimaFrase && lista.length > 1);
+
+    ultimaFrase = novaFrase;
+
+    return novaFrase;
+
+}
+
+
+// CONSULTA
+
+function consultarMorg() {
+
+    if (signoAtual === "") {
+        frase.textContent = "Você sequer informou seu signo, criatura.";
+        return;
+    }
+
+    if (categoriaAtual === "") {
+        frase.textContent = "Escolha o assunto antes de invocar a entidade.";
+        return;
+    }
+
+    terminal.innerHTML = `
+        <p>> Invocação iniciada...</p>
+        <p>> Signo identificado: ${signoAtual}</p>
+        <p>> Consultando arquivos astrais...</p>
+        <p>> Morg está preparando sua resposta.</p>
+    `;
+
+    frase.textContent = "Consultando o universo...";
+
+    consultar.disabled = true;
+
+    setTimeout(function () {
+
+        const resposta = sortearFrase();
+
+        frase.textContent = resposta;
+
+        terminal.innerHTML = `
+            <p>> Conexão astral estabelecida.</p>
+            <p>> Consulta de ${signoAtual} concluída.</p>
+            <p>> Morg se pronunciou. Use essa informação com responsabilidade.</p>
+        `;
+
+        consultar.disabled = false;
+
+    }, 1200);
+
+}
+
+
+// BOTÃO CONSULTAR
+
+consultar.addEventListener("click", consultarMorg);
+
+
+// BOTÃO OUTRA MENSAGEM
+
+outraMensagem.addEventListener("click", consultarMorg);
+</script>
+
+</body>
+
+</html>
