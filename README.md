@@ -1,5 +1,8 @@
 # MORG.EXE
 
+<img width="907" height="561" alt="image" src="https://github.com/user-attachments/assets/52992627-4405-42fd-ad52-c3735404baa6" />
+
+
 A retro-inspired mystical web experience featuring Morg, a digital entity with her own personality, designed to feel like a relic of the early internet. Combining occult aesthetics, interactive guidance, and nostalgic web design.
 
 ### Currently implemented
