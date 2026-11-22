@@ -711,3 +711,140 @@ button:disabled {
     opacity: 0.6;
     cursor: wait;
 }
+
+
+/* =====================================
+   MORG.EXE — RESPONSIVIDADE MOBILE
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* Evita que o site ultrapasse a tela */
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    /* Cabeçalho compacto */
+    header {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 8px auto;
+        padding: 8px 5px;
+    }
+
+    header h1 {
+        font-size: 23px;
+        letter-spacing: 3px;
+    }
+
+    header p {
+        font-size: 10px;
+    }
+
+    /* Layout de uma coluna */
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    /* Todas as áreas ocupam a largura disponível */
+    main > aside,
+    #area-morg {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    /* Configurações */
+    main > aside:first-child {
+        padding: 10px;
+    }
+
+    /* Select de signo */
+    #signo,
+    select {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Botões de categoria */
+    [data-category] {
+        margin: 3px;
+        max-width: 100%;
+    }
+
+    /* Área central */
+    #area-morg {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Janela da Morg */
+    #janela-morg {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 4px;
+    }
+
+    #imagem-morg {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #imagem-morg img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    /* Terminal */
+    #terminal,
+    #resultado {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    /* Ficha da Morg */
+    #ficha-morg {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    /* Texto não estoura a tela */
+    p {
+        overflow-wrap: break-word;
+    }
+
+    /* Rodapé */
+    footer {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

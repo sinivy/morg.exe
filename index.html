@@ -85,8 +85,8 @@
         </p>
 
         <button type="button" id="outra-mensagem">Outra mensagem</button>
-        <button type="button">Copiar</button>
-        <button type="button">Compartilhar</button>
+        <button type="button" id="copiar-frase">Copiar</button>
+        <button type="button" id="compartilhar-frase">Compartilhar</button>
 
      </div>
 
@@ -226,7 +226,37 @@ const conselhos = {
         "Pare de romantizar o mínimo. Até um pombo sabe voltar para casa.",
         "Não confunda saudade com autorização para aceitar qualquer coisa.",
         "O universo não está pedindo que você mande outra mensagem. Vá beber água.",
-        "Se precisa interpretar cada migalha, talvez o banquete não exista."
+        "Se precisa interpretar cada migalha, talvez o banquete não exista." ,
+        "Você quer reciprocidade ou está tentando vencer um concurso de resistência emocional?", 
+        "Não confunda química com incêndio. Ambos queimam, mas um deles destrói sua casa.",
+        "O universo não está pedindo para você insistir. Está pedindo para você interpretar o silêncio.",
+        "Se precisa decifrar cada mensagem, talvez o relacionamento esteja escrito em um idioma que não vale aprender.",
+        "Você merece alguém que não transforme afeto em caça ao tesouro.",
+        "Romance é lindo. Adivinhar intenções alheias em tempo integral é trabalho não remunerado.",
+        "Não mande outra mensagem. Vá comer alguma coisa e preserve sua dignidade.",
+        "Seu coração tem péssimo gosto para projetos de restauração.",
+        "Às vezes a pessoa não é misteriosa. Ela simplesmente não está interessada.",
+        "Pare de romantizar migalhas. Até pombo merece um banquete.",
+        "Amor não deveria exigir perícia investigativa, três tarot e uma equipe de inteligência.",
+        "Se a presença da pessoa te deixa constantemente confusa, isso também é uma resposta.",
+        "Você não precisa ser mais bonita, mais legal ou mais interessante para merecer carinho.",
+        "Não transforme potencial em compromisso. São coisas completamente diferentes.",
+        "Tem gente que aparece para ensinar. Tem gente que aparece para testar sua paciência. Aprenda a diferença.",
+        "A saudade não é uma convocação. Você pode sentir e continuar quieta.",
+        "Não use o mapa astral para justificar alguém que não sabe tratar você.",
+        "Se você precisa diminuir suas necessidades para caber na vida de alguém, está ocupando o lugar errado.",
+        "O amor não é uma competição de quem aguenta mais desaforo.",
+        "Uma conexão intensa não significa uma conexão saudável. O fogo também é intenso.",
+        "Não confunda ser desejada com ser valorizada. São experiências diferentes.",
+        "Você não precisa convencer ninguém a ficar. Nem com feitiço, nem com currículo.",
+        "Se a pessoa só aparece quando está entediada, não é um eclipse. É falta de ocupação.",
+        "Pare de planejar o futuro com alguém que ainda não consegue organizar o presente.",
+        "Seu ex não virou uma entidade iluminada só porque você está com saudade.",
+        "Reciprocidade não é um evento astronômico raro. É o mínimo.",
+        "Você pode gostar de alguém e ainda decidir que essa pessoa não serve para sua vida.",
+        "Não faça da ansiedade uma prova de amor. Ela não precisa sofrer para ser verdadeira.",
+        "O amor pode ser complicado. Mas não deveria ser uma humilhação recorrente.",
+        "Feche esse portal. Se for para voltar, que volte com responsabilidade afetiva e CPF regular."
     ],
 
     dinheiro: [
@@ -235,7 +265,37 @@ const conselhos = {
         "Antes de comprar, pergunte se você quer o produto ou apenas está tentando sentir alguma coisa.",
         "O cartão de crédito não é uma extensão astral do seu salário.",
         "Prosperidade também significa não parcelar uma crise existencial em doze vezes.",
-        "Saturno está analisando seus gastos. Ele não está impressionado."
+        "Saturno está analisando seus gastos. Ele não está impressionado." ,
+        "Seu saldo bancário está tentando entrar em contato com você. Ele está chorando.",
+        "Manifestar riqueza é ótimo. Conferir o extrato também é uma prática espiritual.",
+        "Não compre para preencher um vazio. O cartão de crédito não é um terapeuta e cobra juros.",
+        "A prosperidade ama planejamento. O caos ama parcelamento em doze vezes.",
+        "Você não está pobre de espírito. Está pobre de saldo. Vamos trabalhar com a realidade.",
+        "Antes de comprar, pergunte: eu quero isso ou quero sentir alguma coisa?",
+        "Um dinheiro inesperado pode chegar. Não conte com ele antes de existir.",
+        "Seu futuro eu gostaria de informar que não aprovou essa compra.",
+        "O universo abriu caminhos. Nenhum deles passa pelo rotativo do cartão.",
+        "Pequenos depósitos também são rituais de prosperidade.",
+        "Não gaste dinheiro que ainda não ganhou tentando impressionar quem nem paga seu aluguel.",
+        "A abundância começa quando você para de tratar seu saldo como um segredo de Estado.",
+        "Você pode ter uma vida luxuosa sem comprar coisas que não precisa.",
+        "Faça as contas antes de fazer a oferenda. A entidade aceita Pix, mas não cobre juros.",
+        "A energia financeira está pedindo menos impulso e mais planilha.",
+        "Não é o momento de comprar aquela coisa. Você sabe exatamente qual coisa.",
+        "Seu dinheiro precisa de proteção espiritual e uma conta separada para emergências.",
+        "Riqueza também é conseguir dormir sem pensar em cinco boletos simultaneamente.",
+        "Não se compare com quem está exibindo uma vida financiada em parcelas misteriosas.",
+        "A prosperidade não é uma corrida. É uma construção que exige tijolos, não delírios.",
+        "Se não cabe no orçamento, não cabe na sua energia atual. Recalcule.",
+        "Você não precisa ser rica amanhã. Precisa parar de sabotar o seu próximo mês.",
+        "A oportunidade parece ótima. Leia as letras miúdas antes de vender sua alma.",
+        "Economizar não é castigo. É comprar liberdade para o seu eu futuro.",
+        "O dinheiro que você ignora também desaparece. Abra o aplicativo do banco.",
+        "Não confunda merecimento com necessidade de gastar.",
+        "Seu próximo grande investimento pode ser aprender uma habilidade, não comprar um objeto.",
+        "Faça uma reserva. Até as bruxas precisam de dinheiro para imprevistos mundanos.",
+        "A energia de riqueza está presente. A energia de gastar com consciência precisa ser invocada.",
+        "Prosperidade é muito mais interessante quando você não está desesperada para sobreviver."
     ],
 
     trabalho: [
@@ -244,7 +304,37 @@ const conselhos = {
         "Você não precisa provar seu valor sofrendo mais que todo mundo.",
         "Faça seu trabalho, preserve sua paz e não adote problemas que não possuem seu nome.",
         "Seu potencial não precisa de plateia o tempo inteiro. Construa e deixe o resultado falar.",
-        "O ambiente está estranho? Observe antes de abrir sua boca e invocar consequências."
+        "O ambiente está estranho? Observe antes de abrir sua boca e invocar consequências.",
+        "Seu potencial é enorme. Pena que seu chefe ainda não descobriu como pagar por ele.",
+        "Faça seu trabalho bem, mas não adote a empresa como uma entidade familiar.",
+        "Você não precisa sacrificar sua saúde para provar que merece estar ali.",
+        "Uma oportunidade profissional pode surgir. Mantenha o currículo atualizado e os olhos abertos.",
+        "Não confunda estar ocupada com estar avançando.",
+        "Se a reunião poderia ser um e-mail, invoque forças superiores para encerrá-la.",
+        "Seu talento merece espaço. Não fique eternamente esperando autorização para existir.",
+        "Aprenda o que puder. Até ambientes horríveis podem financiar sua próxima saída.",
+        "Não entregue sua paz em troca de um cargo com nome bonito.",
+        "A competência é importante. Saber estabelecer limites também é.",
+        "Você não precisa responder mensagens de trabalho enquanto está tentando existir fora do trabalho.",
+        "Nem todo colega é amigo. Algumas pessoas são apenas testemunhas do ponto eletrônico.",
+        "A promoção que você deseja exige estratégia, não apenas esperança e sofrimento.",
+        "Se está tudo dependendo de você, talvez o problema seja a organização, não sua produtividade.",
+        "Não aceite responsabilidade de cinco pessoas recebendo pelo trabalho de uma.",
+        "Seu descanso não é um prêmio por ter sido suficientemente produtiva.",
+        "A energia está favorável para aprender algo que aumente seu poder de negociação.",
+        "Faça registros do que você realiza. Humildade não precisa significar invisibilidade.",
+        "Uma porta fechada não significa que o prédio inteiro está inacessível.",
+        "Pare de se desculpar por fazer perguntas necessárias.",
+        "O ambiente pode ser tóxico sem que você seja a responsável por purificá-lo.",
+        "Não tome decisões profissionais importantes no auge da raiva. Escreva, espere e revise.",
+        "Você não nasceu para ser o recurso de emergência de uma empresa mal organizada.",
+        "Aprenda a fazer o trabalho. Aprenda também a reconhecer quando estão explorando sua disposição.",
+        "Seu próximo passo não precisa ser perfeito. Precisa ser possível.",
+        "Networking é trocar contatos, não entregar sua personalidade em sacrifício.",
+        "Se ninguém explica e todos cobram, documente tudo e proteja sua reputação.",
+        "Você pode ser iniciante sem ser incompetente. São conceitos diferentes.",
+        "A carreira é uma construção. Não transforme cada erro em uma profecia de fracasso.",
+        "Trabalhe por seus objetivos. Não deixe que os objetivos da empresa se tornem sua religião."
     ],
 
     estudos: [
@@ -253,7 +343,37 @@ const conselhos = {
         "Estudar 20 minutos ainda é estudar. Pare de esperar uma epifania de 6 horas.",
         "Você pode revolucionar o método de aprendizagem depois de estudar o conteúdo.",
         "Seu cérebro não precisa de humilhação. Precisa de repetição, descanso e alguma paciência.",
-        "Abra o material. O drama pode continuar depois."
+        "Abra o material. O drama pode continuar depois." ,
+        "Você não precisa dominar tudo hoje. O cérebro não é um download em fibra óptica.",
+        "Estudar cansada é possível, mas estudar descansada costuma ser menos parecido com tortura medieval.",
+        "Comece pelo conteúdo que você está evitando. Ele provavelmente está ocupando espaço mental gratuito.",
+        "Uma página compreendida vale mais que vinte páginas decoradas e esquecidas amanhã.",
+        "Não espere motivação. Ela é uma funcionária terceirizada e vive faltando.",
+        "Faça uma pausa antes que seu cérebro protocole uma reclamação formal.",
+        "Você não é burra por precisar reler. Aprender não é uma competição de velocidade.",
+        "O conhecimento que você constrói ninguém pode confiscar em uma demissão.",
+        "Pare de organizar seu material e comece a estudar. Sim, estou falando com você.",
+        "Aprender algo novo é uma forma de expandir seu próprio universo.",
+        "Não precisa estudar oito horas. Precisa estudar de um jeito que consiga repetir amanhã.",
+        "Sua dificuldade de hoje não é um diagnóstico de incapacidade.",
+        "Faça exercícios. Errar em ambiente de estudo é muito mais barato que errar na vida real.",
+        "Você está autorizada a não entender de primeira. O conceito não vai fugir.",
+        "Estude para conseguir fazer, não apenas para conseguir dizer que estudou.",
+        "A procrastinação está oferecendo conforto imediato em troca de problemas futuros. Péssimo negócio.",
+        "Divida essa montanha em pedaços. Até entidades antigas precisam de etapas.",
+        "Não compare seu capítulo três com o capítulo vinte de outra pessoa.",
+        "Seu futuro profissional está sendo construído em pequenas sessões aparentemente insignificantes.",
+        "Se está difícil concentrar, reduza a tarefa. Não abandone o universo inteiro.",
+        "O tutorial não é uma vergonha. Você não nasceu sabendo compilar código.",
+        "Aprenda a pesquisar. Saber encontrar respostas também é inteligência.",
+        "Não transforme seu curso em uma coleção de abas abertas que nunca serão lidas.",
+        "A repetição é magia. Faça novamente até o conhecimento parar de parecer alienígena.",
+        "Você pode mudar de método se o atual estiver claramente te sabotando.",
+        "Não estude apenas para passar. Algumas coisas podem realmente mudar sua vida.",
+        "O erro é parte do processo. Seu orgulho não precisa participar de todas as etapas.",
+        "Concentre-se em uma coisa. Multitarefa é frequentemente caos usando óculos de produtividade.",
+        "Hoje você pode aprender apenas um conceito. Amanhã ele será o alicerce de outros dez.",
+        "Feche as redes sociais, abra o material e pare de invocar distrações."
     ],
 
     eu: [
@@ -263,7 +383,37 @@ const conselhos = {
         "Você pode recomeçar sem fazer um discurso de despedida para sua versão anterior.",
         "Não transforme um dia ruim em uma profecia sobre o resto da sua vida.",
         "Sua existência não precisa ser justificada por resultados.",
-        "Faça o que puder com a energia que realmente tem, não com aquela imaginária."
+        "Faça o que puder com a energia que realmente tem, não com aquela imaginária.",
+        "Você não precisa se tornar outra pessoa para merecer uma vida boa.",
+        "Pare de transformar cada defeito em um projeto de reforma pessoal.",
+        "Você é uma pessoa, não um software esperando a próxima atualização.",
+        "Descansar não apaga seu progresso. Às vezes é justamente o que permite continuar.",
+        "Nem todo dia precisa render uma história inspiradora. Alguns dias só precisam terminar.",
+        "Você está aprendendo a viver, não tentando vencer uma prova contra o relógio.",
+        "Não se abandone só porque alguém não soube ficar.",
+        "Sua personalidade não é um inconveniente que precisa ser editado para agradar.",
+        "Você pode recomeçar sem fazer um anúncio oficial para o universo.",
+        "Seja gentil consigo mesma. Você mora aí dentro, lembra?",
+        "Não precisa ter certeza absoluta para dar um pequeno passo.",
+        "Seu valor não diminui quando você está confusa.",
+        "Você pode mudar de opinião. Isso não é uma falha de caráter.",
+        "Não transforme o passado em uma residência permanente.",
+        "Aprenda a diferenciar autocrítica de crueldade disfarçada de disciplina.",
+        "Você não precisa explicar todas as suas escolhas para quem não vive suas consequências.",
+        "Algumas versões suas foram necessárias para sobreviver. Você pode agradecer e seguir.",
+        "Não se obrigue a florescer todos os dias. Às vezes você é apenas uma raiz trabalhando.",
+        "Você não está atrasada. Está vivendo em um calendário que não pertence a mais ninguém.",
+        "Sua sensibilidade não é defeito. Só precisa de proteção e discernimento.",
+        "Pare de pedir desculpas por ocupar espaço. Você não é uma visita na própria vida.",
+        "A sua próxima versão não precisa odiar a versão anterior para existir.",
+        "Você pode sentir medo e ainda fazer algo. Coragem não exige ausência de pânico.",
+        "Não use o sofrimento como medida de quanto você merece ser amada.",
+        "Seu corpo não é um inimigo que precisa ser vencido diariamente.",
+        "Você não precisa resolver sua vida inteira nesta noite. Vá dormir.",
+        "A liberdade também é poder dizer não sem escrever uma tese de justificativa.",
+        "Reconheça suas pequenas vitórias. O universo não vai emitir certificado automaticamente.",
+        "Você merece uma vida que não precise escapar constantemente.",
+        "Continue se conhecendo. Você é um lugar interessante, apesar das reformas."
     ],
 
     caos: [
@@ -274,9 +424,28 @@ const conselhos = {
         "O universo tem um plano. Ele não quis compartilhar o documento.",
         "Você está recebendo um sinal. Não sabemos de quem. Não temos setor responsável.",
         "Sua aura está carregando. Evite desligar o aparelho.",
-        "Hoje é um excelente dia para não piorar uma situação perfeitamente evitável."
-    ]
-
+        "Hoje é um excelente dia para não piorar uma situação perfeitamente evitável." ,
+        "O universo mandou um sinal. Era um caminhão. Ele não vai parar.",
+        "Você quer uma resposta ou autorização para fazer merda? Porque são coisas diferentes.",
+        "Mercúrio retrógrado não tem nada a ver com isso. Você só é assim mesmo.",
+        "Uma decisão questionável está se aproximando. Pelo menos seja bonita enquanto erra.",
+        "As entidades estão ocupadas. Resolva isso sozinha e depois conte o babado.",
+        "Não é intuição. É ansiedade usando fantasia de vidente.",
+        "Você está tentando encontrar lógica em uma situação que foi criada por um imbecil.",
+        "Pare de procurar sinais. O boleto já é um sinal suficientemente claro.",
+        "O destino está rindo. E, sinceramente, eu também.",
+        "Se tudo der errado, finja que fazia parte do ritual.",
+        "Você não precisa de mais uma teoria. Precisa tomar banho e beber água.",
+        "O astral está péssimo, mas sua capacidade de piorar as coisas continua impressionante.",
+        "A resposta é não. Mas conhecendo você, vai fazer mesmo assim.",
+        "Há uma energia estranha no ar. E pelo cheiro, talvez seja você.",
+        "Não consulte os astros para decisões que podem ser resolvidas com bom senso.",
+        "A fada responsável pelo seu destino pediu demissão.",
+        "Você abriu um portal. Infelizmente, era para a sua própria inconveniência.",
+        "Nem toda tragédia é um aprendizado. Às vezes é só uma terça-feira.",
+        "O universo te ama, mas está perdendo a paciência.",
+        "Faça o que quiser. Só não venha dizer que eu não avisei."
+    ],
 };
 
 
@@ -382,6 +551,55 @@ consultar.addEventListener("click", consultarMorg);
 // BOTÃO OUTRA MENSAGEM
 
 outraMensagem.addEventListener("click", consultarMorg);
+
+// COPIAR FRASE PARA ÁREA DE TRANSFERÊNCIA
+
+const copiarBotao = document.getElementById("copiar-frase");
+
+copiarBotao.addEventListener("click", async function () {
+    const texto = frase.textContent;
+
+    try {
+        await navigator.clipboard.writeText(texto);
+        copiarBotao.textContent = "Copiado!";
+    } catch (erro) {
+        copiarBotao.textContent = "Não foi possível copiar";
+    }
+
+    setTimeout(function () {
+        copiarBotao.textContent = "Copiar";
+    }, 2000);
+});
+
+// COMPARTILHAR FRASE
+
+const compartilharBotao = document.getElementById("compartilhar-frase");
+
+compartilharBotao.addEventListener("click", async function () {
+    const texto = frase.textContent;
+
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: "Conselho da Morg",
+                text: texto
+            });
+        } catch (erro) {
+            // O usuário pode simplesmente cancelar o compartilhamento.
+        }
+    } else {
+        try {
+            await navigator.clipboard.writeText(texto);
+            compartilharBotao.textContent = "Texto copiado!";
+        } catch (erro) {
+            compartilharBotao.textContent = "Falha ao compartilhar";
+        }
+
+        setTimeout(function () {
+            compartilharBotao.textContent = "Compartilhar";
+        }, 2000);
+    }
+});
 </script>
 
 </body>
